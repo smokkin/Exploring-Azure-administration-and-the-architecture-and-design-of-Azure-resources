@@ -124,7 +124,7 @@ Azure does this automatically for your cloud storage to protect against:
 - 🌐 Network problems
 - 🌪️ Natural disasters
 
-## What this README covers
+## What this Section covers
 - **Why redundancy matters** in Azure Storage  
 - **How Azure replicates data** inside a region and across regions  
 - **The redundancy options** explained in plain terms (LRS, ZRS, GRS, GZRS, and their read-access variants)  
