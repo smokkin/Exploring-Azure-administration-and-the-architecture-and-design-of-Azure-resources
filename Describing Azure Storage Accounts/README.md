@@ -101,6 +101,87 @@ If you name your account `mystorage123`:
 
 ---
 
+# Azure Storage Redundancy — Simple Explanation
+
+> Azure Storage keeps multiple copies of your data so it stays safe and available even when things go wrong.
+> Choose a redundancy option by balancing cost against how much protection and availability you need.
+
+## What is Redundancy? (The "Backup" Concept)
+
+**Redundancy = Making multiple copies of your data** so you never lose it.
+
+Think of it like this:
+- 📸 You take a photo on your phone
+- ☁️ It automatically backs up to iCloud/Google Photos
+- 💻 You also save it to your laptop
+- 🖼️ You print a physical copy
+
+If your phone breaks, you still have 3 other copies. **That's redundancy!**
+
+Azure does this automatically for your cloud storage to protect against:
+- 🔧 Hardware failures (hard drives dying)
+- ⚡ Power outages
+- 🌐 Network problems
+- 🌪️ Natural disasters
+
+---
+
+## The Big Picture: Two Levels of Protection
+
+Azure protects your data at **two geographic levels**:
+
+┌─────────────────────────────────────────┐
+│     PRIMARY REGION (Your Main Area)     │
+│  ┌─────────────────────────────────┐    │
+│  │  Multiple copies of your data  │    │
+│  │  (Protects against local failures)│   │
+│  └─────────────────────────────────┘    │
+└─────────────────────────────────────────┘
+↓
+┌─────────────────────────────────────────┐
+│   SECONDARY REGION (Far Away Backup)    │
+│  ┌─────────────────────────────────┐    │
+│  │  Additional copy hundreds of    │    │
+│  │  miles away (Disaster protection)│   │
+│  └─────────────────────────────────┘    │
+└─────────────────────────────────────────┘
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Describe Azure storage redundancy
 Completed
 100 XP
