@@ -289,26 +289,36 @@ Add **"Read Access"** (RA-) to enable **always-on** access to your secondary reg
 ---
 
 ## Decision Flowchart
-START: What do you need?
-│
-├───> Just testing or non-critical data?
-│       └───> Choose LRS (cheapest)
-│
-├───> Production app in one region?
-│       └───> Choose ZRS (high availability)
-│
-├───> Need disaster protection?
-│       │
-│       ├───> Budget conscious?
-│       │       └───> Choose GRS
-│       │
-│       └───> Want maximum protection?
-│               └───> Choose GZRS
-│
-└───> Need to read from secondary region?
-├───> Basic needs? ───> RA-GRS
-└───> Premium needs? ──> RA-GZRS
 
+```mermaid
+flowchart TD
+    A[START: What level of protection do you need?] --> B{Is this for testing or non-critical data?}
+    
+    B -->|Yes| C[Choose LRS<br/>💰 Cheapest option<br/>⚠️ Single data center]
+    B -->|No| D{Do you need protection across regions?}
+    
+    D -->|No| E{Do you need high availability<br/>within one region?}
+    E -->|Yes| F[Choose ZRS<br/>🏢 3 availability zones<br/>⚡ Always accessible]
+    E -->|No| G[Choose LRS<br/>💰 Budget option]
+    
+    D -->|Yes| H{What's your priority?}
+    
+    H -->|💰 Lowest cost| I{Do you need read access<br/>to secondary region?}
+    I -->|Yes| J[Choose RA-GRS<br/>👁️ Read secondary anytime<br/>🌍 Regional disaster protection]
+    I -->|No| K[Choose GRS<br/>🔒 Secondary locked until failover<br/>🌍 Regional disaster protection]
+    
+    H -->|🛡️ Maximum protection| L{Do you need read access<br/>to secondary region?}
+    L -->|Yes| M[Choose RA-GZRS<br/>🏆 Ultimate protection<br/>👁️ Read secondary anytime]
+    L -->|No| N[Choose GZRS<br/>🏆 Maximum durability<br/>🔒 Secondary locked until failover]
+    
+    style C fill:#ffcccc
+    style G fill:#ffcccc
+    style F fill:#ccffcc
+    style J fill:#ccffff
+    style K fill:#ccffff
+    style M fill:#ffffcc
+    style N fill:#ffffcc
+```
 ---
 
 ## Tradeoffs to consider
