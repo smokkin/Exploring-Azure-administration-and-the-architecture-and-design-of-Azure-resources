@@ -311,6 +311,45 @@ START: What do you need?
 
 ---
 
+## Tradeoffs to consider
+- **Cost vs protection:** More redundancy (ZRS, GZRS) costs more. Choose based on how much downtime or data loss you can tolerate.
+- **RPO (data lag):** Cross-region copies are asynchronous; a catastrophic primary-region failure could lose the most recent writes.
+- **Performance:** ZRS and GZRS give better availability for local reads/writes during zone outages.
+- **Compliance:** ZRS can help keep data inside a country or region for governance reasons.
+
+---
+
+## Quick decision checklist
+1. **How critical is the data?** If losing minutes of writes is unacceptable, prefer geo-redundant options.  
+2. **Do you need reads from a secondary region?** If yes, choose RA-GRS or RA-GZRS.  
+3. **Do you need zone-level resilience?** If yes, choose ZRS or GZRS.  
+4. **Is cost a major constraint?** LRS is cheapest; weigh cost against risk.  
+5. **Pick the storage SKU** (Standard GPv2, Premium block blob, etc.) based on performance and protocol needs, then choose redundancy.
+
+---
+## Example scenarios
+- **Development or noncritical backups:** LRS — low cost, acceptable risk.  
+- **Customer-facing web app in one region:** ZRS — keeps app running if a zone fails.  
+- **Financial or healthcare data requiring disaster recovery:** GZRS or RA-GZRS — best durability and optional read access.  
+- **Global read-heavy service that tolerates eventual consistency:** RA-GRS — read access in secondary region helps scale reads.
+
+---
+
+## Short glossary
+- **RPO (Recovery Point Objective):** how far back you can recover data after a disaster (how much recent data might be lost).  
+- **Availability zone:** an isolated location within a region with independent power, cooling, and networking.  
+- **Paired region:** the secondary region Azure pairs with your primary region for geo-replication.
+
+---
+
+## Final tips
+- Start with the **risk profile** of your application, not the cheapest option.  
+- Use **ZRS** when you need high availability inside a region.  
+- Use **GZRS** when you need both zone-level resilience and cross-region disaster protection.  
+- Enable **RA-** variants only if you need read access to the secondary copy before failover.
+
+---
+
 ## Key Terms Explained
 
 | Term | Simple Explanation |
