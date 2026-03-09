@@ -82,19 +82,20 @@ A blob can be:
 | **Data analysis** | Feeding data to AI/ML models |
 
 ## How to Access Blobs
-┌─────────────────────────────────────────┐
-│         Your Blob Data                  │
-│    (Stored in Azure Data Centers)       │
-└─────────────────────────────────────────┘
-│
-┌───────────────┼───────────────┐
-│               │               │
-▼               ▼               ▼
-┌─────────┐   ┌──────────┐   ┌──────────┐
-│  URL    │   │  APIs    │   │  Tools   │
-│(Direct  │   │(REST,    │   │(Portal,  │
-│ link)   │   │ SDKs)    │   │ Explorer)│
-└─────────┘   └──────────┘   └──────────┘
+
+```mermaid
+flowchart TD
+    A[Your Blob Data<br/>Stored in Azure Data Centers] --> B{Access Methods}
+    B --> C[URL<br/>Direct Link]
+    B --> D[APIs<br/>REST, SDKs]
+    B --> E[Tools<br/>Portal, Storage Explorer]
+    
+    style A fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#000
+    style B fill:#fff9c4,stroke:#f57f17,stroke-width:2px,color:#000
+    style C fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px,color:#000
+    style D fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px,color:#000
+    style E fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px,color:#000
+```
 
 
 
