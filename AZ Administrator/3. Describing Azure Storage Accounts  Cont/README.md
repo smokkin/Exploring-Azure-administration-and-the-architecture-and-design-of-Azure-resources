@@ -146,6 +146,46 @@ flowchart LR
     style E1 fill:#ffffff,stroke:#666,stroke-width:1px,color:#000
 ```
 
+**Alternative: Code Block Version** 
+
+```markdown
+## AzCopy Commands Reference
+
+### Quick Command Reference
+
+```bash
+# UPLOAD: Local files to Azure
+azcopy copy "C:\local\*" "https://mystorage.blob.core.windows.net/container"
+
+# DOWNLOAD: Azure to local files
+azcopy copy "https://mystorage.blob.core.windows.net/container" "C:\local\"
+
+# COPY BETWEEN ACCOUNTS: Azure to Azure
+azcopy copy "https://account1.blob.core.windows.net/container" "https://account2.blob.core.windows.net/container"
+
+# SYNC: One-way synchronization (source → destination)
+azcopy sync "C:\local" "https://mystorage.blob.core.windows.net/container"
+```
+
+**Alternative: Simple Table Version** (most accessible)
+
+```markdown
+## AzCopy Commands Reference
+
+| Action | Command Syntax | Description |
+|--------|---------------|-------------|
+| **⬆️ Upload** | `azcopy copy "C:\local\*" "https://..."` | Copy local files to Azure Blob/File storage |
+| **⬇️ Download** | `azcopy copy "https://..." "C:\local\"` | Copy from Azure to local machine |
+| **↔️ Copy Between** | `azcopy copy "https://account1..." "https://account2..."` | Transfer between Azure storage accounts |
+| **🔄 Sync** | `azcopy sync "C:\local" "https://..."` | One-way sync: adds/updates/deletes to match source |
+
+**Key Points:**
+- Use `copy` for one-time transfers
+- Use `sync` for ongoing synchronization (⚠️ one-direction only!)
+- Supports wildcards (`*`) for batch operations
+- Works with Blob, File, and ADLS Gen2 storage
+```
+
 | Capability | Description | Example |
 |-----------|-------------|---------|
 | **Upload** | Local → Azure | Back up nightly logs to blob storage |
