@@ -137,6 +137,11 @@ flowchart TD
     style C fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000
     style D fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,color:#000
 ```
+As data gets older and less used, it moves to cheaper tiers:
+Hot: Frequently accessed (highest cost, instant access)
+Cool: Infrequently accessed (lower cost, instant access)
+Archive: Rarely accessed (lowest cost, hours to retrieve)
+
 **Alternative: Left-to-Right Flow Version**
 
 ## Data Lifecycle: Moving Through Storage Tiers
