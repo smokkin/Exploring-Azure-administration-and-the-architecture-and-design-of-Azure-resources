@@ -53,6 +53,7 @@ You'll see a form with several tabs. Start with the **"Basics"** tab:
 3. **Check the box** ✓
 
 &gt; 📝 **Why this matters:** This lets you make specific files publicly accessible later, which we'll need for this exercise.
+
 <img width="752" height="425" alt="image" src="https://github.com/user-attachments/assets/1ebd66e9-cb63-4e28-a5d0-2dd535b10c8f" />
 
 #### Step 5: Review and Create
@@ -130,10 +131,10 @@ You have two options:
 5. **You should see an error message:**
 
 ```xml
-&lt;Error&gt;
-&lt;Code&gt;ResourceNotFound&lt;/Code&gt;
-  &lt;Message&gt;The specified resource does not exist. RequestId:4a4bd3d9-101e-005a-1a3e-84bd42000000&lt;/Message&gt;
-&lt;/Error&gt;
+<Error>
+<Code>ResourceNotFound</Code>
+  <Message>The specified resource does not exist. RequestId:4a4bd3d9-101e-005a-1a3e-84bd42000000</Message>
+</Error>
 ```
 <img width="752" height="425" alt="image" src="https://github.com/user-attachments/assets/867b07a1-e34b-41f3-b39a-f71236423fc6" />
 <img width="752" height="425" alt="image" src="https://github.com/user-attachments/assets/202c8fab-7ad4-4b06-bc62-b338fb7e09b4" />
