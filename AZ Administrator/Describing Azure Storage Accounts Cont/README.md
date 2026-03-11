@@ -139,7 +139,6 @@ flowchart TD
 ```
 **Alternative: Left-to-Right Flow Version**
 
-```markdown
 ## Data Lifecycle: Moving Through Storage Tiers
 
 ```mermaid
@@ -155,7 +154,6 @@ Data automatically moves from Hot → Cool → Archive as it ages, with costs de
 
 **Alternative: With Cold Tier Included**
 
-```markdown
 ## Data Lifecycle: Moving Through Storage Tiers
 
 ```mermaid
