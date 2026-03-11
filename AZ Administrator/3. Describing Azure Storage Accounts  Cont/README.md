@@ -123,29 +123,6 @@ flowchart LR
 
 ## AzCopy Commands Reference
 
-```mermaid
-flowchart LR
-    A[AzCopy Commands] --> B[Upload<br/>Local → Azure]
-    A --> C[Download<br/>Azure → Local]
-    A --> D[Copy Between<br/>Azure → Azure]
-    A --> E[Sync<br/>One-way Match]
-    
-    B --> B1[azcopy copy<br/>"C:\local\*"<br/>"https://..."]
-    C --> C1[azcopy copy<br/>"https://..."<br/>"C:\local\"]
-    D --> D1[azcopy copy<br/>"https://account1..."<br/>"https://account2..."]
-    E --> E1[azcopy sync<br/>"C:\local"<br/>"https://..."]
-    
-    style A fill:#e3f2fd,stroke:#1565c0,stroke-width:3px,color:#000
-    style B fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px,color:#000
-    style C fill:#ffcdd2,stroke:#c62828,stroke-width:2px,color:#000
-    style D fill:#fff9c4,stroke:#f57f17,stroke-width:2px,color:#000
-    style E fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px,color:#000
-    style B1 fill:#ffffff,stroke:#666,stroke-width:1px,color:#000
-    style C1 fill:#ffffff,stroke:#666,stroke-width:1px,color:#000
-    style D1 fill:#ffffff,stroke:#666,stroke-width:1px,color:#000
-    style E1 fill:#ffffff,stroke:#666,stroke-width:1px,color:#000
-```
-
 **Alternative: Code Block Version** 
 
 ```markdown
