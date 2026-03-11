@@ -97,10 +97,76 @@ flowchart TD
     style E fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px,color:#000
 ```
 
+**Access methods:**
+- **Direct URL:** `https://myaccount.blob.core.windows.net/mycontainer/myfile.jpg`
+- **REST API:** Standard web requests
+- **SDKs:** Pre-built code libraries for .NET, Java, Python, Node.js, PHP, Ruby
+- **Azure Portal:** Web interface (point and click)
+- **Azure Storage Explorer:** Desktop application
 
+---
 
+## Blob Storage Tiers (Save Money Based on Usage)
 
+Not all data is accessed equally. Azure lets you choose **storage tiers** to balance cost vs. access speed.
 
+### The Four Tiers Explained
+
+| Tier | Access Frequency | Min Storage | Cost | Access Speed | Use Case |
+|------|-----------------|-------------|------|--------------|----------|
+| **Hot** | Daily/multiple times per day | None | 💰💰💰 Highest | ⚡ Instant | Current website images, active databases |
+| **Cool** | Monthly | 30 days | 💰💰 Medium | ⚡ Instant | Monthly reports, quarterly invoices |
+| **Cold** | Quarterly | 90 days | 💰 Lower | ⚡ Instant | Old project files, compliance data |
+| **Archive** | Rarely (yearly) | 180 days | 🪙 Lowest | 🐢 Hours (must "rehydrate") | Legal records, old backups |
+
+### How Tiers Work
+
+## Data Lifecycle: Moving Through Storage Tiers
+
+```mermaid
+flowchart TD
+    A[DATA LIFECYCLE] --> B[HOT<br/>Active Data<br/>💰💰💰<br/>Expensive]
+    A --> C[COOL<br/>Less Used<br/>💰💰<br/>Moderate]
+    A --> D[ARCHIVE<br/>Rarely Needed<br/>🪙<br/>Cheap]
+    
+    B --> C
+    C --> D
+    
+    style A fill:#e3f2fd,stroke:#1565c0,stroke-width:3px,color:#000
+    style B fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#000
+    style C fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000
+    style D fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,color:#000
+```
+**Alternative: Left-to-Right Flow Version**
+
+```markdown
+## Data Lifecycle: Moving Through Storage Tiers
+
+```mermaid
+flowchart LR
+    A[HOT<br/>Active<br/>💰💰💰<br/>Expensive] --> B[COOL<br/>Less Used<br/>💰💰<br/>Moderate]
+    B --> C[ARCHIVE<br/>Rarely Needed<br/>🪙<br/>Cheap]
+    
+    style A fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#000
+    style B fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000
+    style C fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,color:#000
+Data automatically moves from Hot → Cool → Archive as it ages, with costs decreasing at each step.
+
+**Alternative: With Cold Tier Included**
+
+```markdown
+## Data Lifecycle: Moving Through Storage Tiers
+
+```mermaid
+flowchart LR
+    A[HOT<br/>Active<br/>0-30 days<br/>💰💰💰] --> B[COOL<br/>Monthly<br/>30+ days<br/>💰💰]
+    B --> C[COLD<br/>Quarterly<br/>90+ days<br/>💰]
+    C --> D[ARCHIVE<br/>Rarely<br/>180+ days<br/>🪙]
+    
+    style A fill:#ffcdd2,stroke:#b71c1c,stroke-width:2px,color:#000
+    style B fill:#c8e6c9,stroke:#1b5e20,stroke-width:2px,color:#000
+    style C fill:#b3e5fc,stroke:#01579b,stroke-width:2px,color:#000
+    style D fill:#ffe0b2,stroke:#e65100,stroke-width:2px,color:#000
 
 
 
