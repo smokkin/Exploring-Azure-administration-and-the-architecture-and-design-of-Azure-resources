@@ -210,6 +210,7 @@ flowchart TD
     style C2 fill:#ffffff,stroke:#666,stroke-width:1px,color:#000
     style C3 fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px,color:#000
 ```
+
 How It Works:
 Connect your Azure account in the left panel
 Browse containers and files like Windows Explorer
