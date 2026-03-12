@@ -183,6 +183,19 @@ azcopy sync "C:\local" "https://mystorage.blob.core.windows.net/container"
 
 ## Azure Storage Explorer Interface
 
+**Interface Layout:**
+- **Left Panel:** Account Navigator - Browse all your storage accounts and services
+- **Right Panel:** File Browser - View and manage files with action buttons
+
+**Key Features:**
+| Feature | What You Can Do |
+|---------|-----------------|
+| **Upload** | Drag & drop files to Azure |
+| **Download** | Save Azure files to your computer |
+| **Delete** | Remove files from storage |
+| **New Folder** | Create virtual folders in containers |
+| **Copy URL** | Get direct link to share files |
+
 ```mermaid
 flowchart TD
     A[AZURE STORAGE EXPLORER<br/>Desktop App] --> B[Left Panel:<br/>Account Navigator]
@@ -196,7 +209,7 @@ flowchart TD
     
     C --> C1[📁 Container Contents]
     C --> C2[📄 Files & Folders]
-    C --> C3[Action Buttons:<br/>Upload | Download | Delete<br/>New Folder | Copy URL]
+    C --> C3[Action Buttons:<br/>Upload \| Download \| Delete<br/>New Folder \| Copy URL]
     
     style A fill:#e3f2fd,stroke:#1565c0,stroke-width:3px,color:#000
     style B fill:#fff9c4,stroke:#f57f17,stroke-width:2px,color:#000
