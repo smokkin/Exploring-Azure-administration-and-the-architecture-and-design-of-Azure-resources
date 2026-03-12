@@ -1279,9 +1279,4 @@ az vm auto-shutdown   --resource-group DevRG   --name DevVM   --time 1800   --em
 
 ---
 
-*This guide provides comprehensive coverage from basic labs to enterprise deployments. Start with the basic implementation, then progressively enhance using the advanced sections.*
-
-**Contributing:** Found an issue? Want to add a scenario? Submit feedback!
-
-**License:** Educational use permitted. Attribution appreciated.
 
