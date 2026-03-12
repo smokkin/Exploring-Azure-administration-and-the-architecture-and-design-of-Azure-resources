@@ -209,7 +209,7 @@ flowchart TD
     
     C --> C1[📁 Container Contents]
     C --> C2[📄 Files & Folders]
-    C --> C3[Action Buttons:<br/>Upload \| Download \| Delete<br/>New Folder \| Copy URL]
+    C --> C3[Action Buttons:<br/>Upload / Download / Delete<br/>New Folder / Copy URL]
     
     style A fill:#e3f2fd,stroke:#1565c0,stroke-width:3px,color:#000
     style B fill:#fff9c4,stroke:#f57f17,stroke-width:2px,color:#000
