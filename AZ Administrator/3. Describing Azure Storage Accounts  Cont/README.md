@@ -196,7 +196,7 @@ azcopy sync "C:\local" "https://mystorage.blob.core.windows.net/container"
 | **New Folder** | Create virtual folders in containers |
 | **Copy URL** | Get direct link to share files |
 
-
+```mermaid
 flowchart TD
     A[AZURE STORAGE EXPLORER<br/>Desktop App] --> B[Left Panel:<br/>Account Navigator]
     A --> C[Right Panel:<br/>File Browser]
@@ -222,7 +222,7 @@ flowchart TD
     style C1 fill:#ffffff,stroke:#666,stroke-width:1px,color:#000
     style C2 fill:#ffffff,stroke:#666,stroke-width:1px,color:#000
     style C3 fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px,color:#000
-
+```
 
 How It Works:
 Connect your Azure account in the left panel
