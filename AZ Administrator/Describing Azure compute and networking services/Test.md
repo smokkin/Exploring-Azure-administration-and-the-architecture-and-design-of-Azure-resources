@@ -23,7 +23,7 @@
 
 ### What You'll Learn
 
-This guide transforms a basic Azure VM lab into **production-ready deployment patterns** used by enterprises worldwide. You'll master:
+This guide transforms a basic Azure VM lab into **production-ready deployment patterns** used by enterprises worldwide. What to master:
 
 - ✅ Infrastructure as Code (IaC) deployment
 - ✅ Network security configuration
